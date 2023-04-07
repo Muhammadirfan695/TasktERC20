@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "tokenPerEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Token.sol": "Mytoken"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Token.sol": {
+			"keccak256": "0xdbac1e3d32d9c76590c51702b41d444a86366ae25884cdcd8b1ef08d8617b427",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e62d12cb58ae65825fbc62340f68a6d09e3db64ecb881a9cbb18154adcbb0911",
+				"dweb:/ipfs/QmcFfMjKeUg8Ljmxza9T4qBKYEKEvpqz3xehQEQj2pn3uX"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "__name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "__symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "__decimals",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"USDTA.sol": "ERC20Detailed"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"USDTA.sol": {
+			"keccak256": "0x55b9d81c2846cce988a22c5f9bec56b3f0c0c191188e6c7e00bb5d8be862a5b8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5962c565eaec1f1642729203dbcb4c3e7b7598033bd384e952cf86013b544b79",
+				"dweb:/ipfs/Qmaey7ziMkfinwXQGd8J5Cqi6mGtMaEiv7eh5HgyWin3Hh"
+			]
+		}
+	},
+	"version": 1
+}

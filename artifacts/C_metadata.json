@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.19+commit.7dd6d404"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "receiveTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contract1.sol": "C"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Contract1.sol": {
+			"keccak256": "0x88cc667816a5ff137b898aaa45cacd7222d0c110758d78077bb0d98d23eabfb1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dc156877813fdaeacaf6d5dc50212f58184c2c52c8570a211ea50e750fa063e6",
+				"dweb:/ipfs/QmUKP7PTcJp8myo5V82Be6WGGcZdKaapwSqYUExfU5NEYp"
+			]
+		}
+	},
+	"version": 1
+}

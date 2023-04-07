@@ -1,0 +1,57 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "test",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "Baddress",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TestingCode.sol": "A"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TestingCode.sol": {
+			"keccak256": "0x016df320aefb960995c87ffbe905719ac9e27b41c2daa4f840903d9eb4a1a9c1",
+			"urls": [
+				"bzzr://478c5a4f3f92ac91d42ba5ee84aa26aedd5b228448df541016f5cd853d650a9c"
+			]
+		}
+	},
+	"version": 1
+}
