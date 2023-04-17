@@ -559,10 +559,10 @@ abstract contract Ownable is Context {
     }
 }
 
-contract USDCToken is ERC20, Ownable {
+contract USDTToken is ERC20, Ownable {
 
     address public buycontract;  
-    constructor () ERC20("USDC", "USDCT") {
+    constructor () ERC20("USDT", "USDTT") {
         _mint(msg.sender,(100000*(10**decimals())));
     }
 
