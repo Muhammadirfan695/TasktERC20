@@ -1,47 +1,44 @@
-
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
-contract ERC20Token {
-    string public name;
-    string public symbol;
-    uint256 public totalSupply;
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-    mapping(address => uint256) public balanceOf;
-    mapping(address => mapping(address => uint256)) public allowance;
+contract MyToken is ERC20 {
 
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
-
-    constructor(string memory _name, string memory _symbol, uint256 _totalSupply) {
-        name = _name;
-        symbol = _symbol;
-        totalSupply = _totalSupply;
-        balanceOf[msg.sender] = totalSupply;
-        emit Transfer(address(0), msg.sender, totalSupply);
+    address public _owner;
+    uint256 public Time = 2 minutes;
+    uint256 public locked;
+    bool public isLocked;
+    event LogDepositeMade(address accountHoder, uint256 amount);
+    constructor() ERC20("Skil token", "skc") {
+        _owner = msg.sender;
+        locked = block.timestamp + Time;
+        _mint(address(this), 10000 * 10**18);
     }
-
-    function transfer(address _to, uint256 _value) public returns (bool success) {
-        require(balanceOf[msg.sender] >= _value, "Insufficient balance");
-        balanceOf[msg.sender] -= _value;
-        balanceOf[_to] += _value;
-        emit Transfer(msg.sender, _to, _value);
-        return true;
+    modifier onlyOwner {
+        require(msg.sender == _owner, "Ownable: caller is not the owner");
+        _;
     }
-
-    function approve(address _spender, uint256 _value) public returns (bool success) {
-        allowance[msg.sender][_spender] = _value;
-        emit Approval(msg.sender, _spender, _value);
-        return true;
+    function TokenTransferToUser(address[] memory recipients, uint256 amount) public {
+        require(amount > 0, "Invalid amount");
+        for (uint256 i = 0; i < recipients.length; i++) {
+            ERC20.transfer(recipients[i], amount);
+        }
     }
-
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-        require(_value <= balanceOf[_from], "Insufficient balance");
-        require(_value <= allowance[_from][msg.sender], "Allowance exceeded");
-        balanceOf[_from] -= _value;
-        balanceOf[_to] += _value;
-        allowance[_from][msg.sender] -= _value;
-        emit Transfer(_from, _to, _value);
-        return true;
+    function TokenTransferToContract(uint256 amount ) public {
+        require(amount > 0, "Invalid amount");
+           ERC20.transfer(address(this), amount);
+            isLocked = true;
+        
     }
+ function withdrawToken(address _tokenAddress, uint _amount) public {
+ require(block.timestamp > locked, " locked!");
+ require(ERC20.balanceOf(address(this)) >= _amount, "Insufficient balance");
+  ERC20 token = ERC20(_tokenAddress);
+  token.transfer(msg.sender, _amount);
+  }
 }
+ // function setOwner(address _newOwner) external onlyOwner {
+    //     require(_newOwner != address(0), "invalid address");
+    //     _owner = _newOwner;
+    // }
