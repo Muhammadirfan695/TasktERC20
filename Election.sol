@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity >=0.4.21 <0.9.0;
 
 contract Election {
     address public admin;
@@ -7,15 +7,14 @@ contract Election {
     uint256 voterCount;
     bool start;
     bool end;
-    // bool starttime = true;
-    constructor() {
+
+    constructor()  {
         // Initilizing default values
         admin = msg.sender;
         candidateCount = 0;
         voterCount = 0;
         start = false;
         end = false;
-        // starttime = block.timestamp  = 10 houre;
     }
 
     function getAdmin() public view returns (address) {
